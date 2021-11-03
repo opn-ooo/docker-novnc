@@ -23,7 +23,7 @@ You can specify the following variables:
 ### Stand-alone Demo
 Run:
 ```bash
-$ docker run --rm -it -p 8080:8080 ghcr.io/dtinth/docker-novnc
+$ docker run --rm -it -p 8080:8080 ghcr.io/opn-ooo/docker-novnc
 ```
 Open a browser and see the `xterm` demo at `http://<server>:8080/vnc.html`
 
@@ -32,7 +32,7 @@ Open a browser and see the `xterm` demo at `http://<server>:8080/vnc.html`
 version: '2'
 services:
   x11:
-    image: ghcr.io/dtinth/docker-novnc
+    image: ghcr.io/opn-ooo/docker-novnc
     environment:
       # Adjust to your screen size
       - DISPLAY_WIDTH=1600
