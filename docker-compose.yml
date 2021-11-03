@@ -2,7 +2,6 @@ version: '2'
 services:
   ide:
     image: psharkey/intellij:latest
-#    image: psharkey/netbeans-8.1:latest
     environment:
       - DISPLAY=novnc:0.0
     depends_on:
@@ -10,9 +9,8 @@ services:
     networks:
       - x11
   novnc:  
-    image: theasp/novnc:latest
+    build: .
     environment:
-      # Adjust to your screen size
       - DISPLAY_WIDTH=1600
       - DISPLAY_HEIGHT=968
     ports:
