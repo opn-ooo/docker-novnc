@@ -1,5 +1,5 @@
 # noVNC Display Container
-This image is intended to be used for displaying X11 applications from other containers in a browser. A stand-alone demo as well as a [Version 2](https://docs.docker.com/compose/compose-file/#version-2) composition.
+This image is intended to be used for displaying X11 applications from other containers in a browser.
 
 ## Image Contents
 
@@ -23,7 +23,7 @@ You can specify the following variables:
 ### Stand-alone Demo
 Run:
 ```bash
-$ docker run --rm -it -p 8080:8080 ghcr.io/opn-ooo/docker-novnc
+$ docker run --rm -it -p 8080:8080 ghcr.io/opn-ooo/docker-novnc:main
 ```
 Open a browser and see the `xterm` demo at `http://<server>:8080/vnc.html`
 
@@ -32,7 +32,7 @@ Open a browser and see the `xterm` demo at `http://<server>:8080/vnc.html`
 version: '2'
 services:
   x11:
-    image: ghcr.io/opn-ooo/docker-novnc
+    image: ghcr.io/opn-ooo/docker-novnc:main
     environment:
       # Adjust to your screen size
       - DISPLAY_WIDTH=1600
